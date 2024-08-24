@@ -10,7 +10,7 @@ async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new().service(greet)
     })
-        .bind(("localhost", 80))?
+        .bind(("0.0.0.0", 4000))?
         .run()
         .await
 }
